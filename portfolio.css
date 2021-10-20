@@ -1,0 +1,527 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital@1&family=Montserrat:wght@300;@500&display=swap');
+/*COPIED*/
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+	width: 100%;
+}
+
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+
+/***CSS FOR ALL PAGES***/
+.active{
+	border: 2px solid black;
+	width:2%;
+}
+
+
+html, body {
+	display: block;
+	margin: 0;
+}
+/*Displays the banner at the top of the page and makes it fit the screen*/
+
+.banner {
+	width: 100%;
+}
+/*Styles the desktop nav bar, eg. adds the dark blue backgroudn color and the box shadow*/
+
+.main-nav {
+	overflow: hidden;
+	background-color: #132f51;
+	margin-bottom: 1%;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+	padding-bottom: 20px;
+}
+
+/*Style the title in the nav bar*/
+
+.title {
+	text-align: center;
+	display: inline-block;
+	color: white;
+	text-align: center;
+	font-size: 240%;
+	padding-top: 2%;
+	padding-left: 1.5%;
+	padding-bottom: 1%;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: 'Karla', sans-serif;
+}
+
+
+
+/****FOOTER****/
+
+/*Styles the footer, eg sets the font and makes sure it is the right color*/
+footer {
+	overflow: hidden;
+	color: white;
+	background-color: #132f51;
+	font-family: 'Karla', sans-serif;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 10px;
+}
+/*Styles the footer hyperlinks, like adds the font and the font color*/
+
+footer a {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 10px 3px;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #65b8e7;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+h1 {
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+}
+h2 {
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+	font-size: 140%;
+}
+/*To change the content margins on the page*/
+
+.main-content {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 15%;
+	padding-bottom: 6.5%;
+	font-weight: 300;
+}
+/*Thickens and determines the length of the Header Underline*/
+
+hr {
+	width: 40%;
+	border: 1px solid black;
+}
+/***CSS FOR INDEX PAGE***/
+
+/*Centering the text for DVC Standards secion of the page*/
+
+.index-standards {
+	text-align: center;
+}
+
+/***Index Table***/
+
+/*Styles the top row of the index table, eg. gets the font and sets the dark blue background color*/
+.index-table tr th {
+	margin-left: 20%;
+	font-family: 'Karla', sans-serif;
+	color: white;
+	background-color: #132f51;
+}
+/*Styles the index table, eg. gets the font and sets the border around the entire table*/
+.index-table th, td {
+	border: 2px solid black;
+	padding: 15px;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	transition: color .5s ease;
+	transition: background-color .5s ease;
+}
+/*collapes the bordersof the table to make it more compact*/
+.index-table {
+	margin: auto;
+	border-collapse: collapse;
+}
+/*displays the main image at the top of the page and centers it*/
+
+.index-main-img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+/***Code for the Index Image Links***/
+
+/*Sets the border and size of the images for the links*/
+
+.index-img-link {
+	position: relative;
+	width: 78%;
+	border: 3px solid #132f51;
+	border-radius: 2px;
+}
+/*sets background image's opacity and makes sure the images fit in the container*/
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+/*Sets the text within the blue box in the middle of the images*/
+.middle {
+	background-color: white;
+	width: 80%;
+	transition: opacity .5s ease;
+	opacity: 0.2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+/*Image links hover effects to change opacity when the user hovers their mouse over them*/
+
+.index-img-link:hover .image {
+	filter: blur(5px);
+}
+.index-img-link:hover .middle {
+	opacity: 1;
+}
+/*Styles the image link text, eg. adds the text font, makes it white and makes the box dak blue*/
+
+.text {
+	background-color: #132f51;
+	opacity: 1;
+	color: white;
+	font-size: 23px;
+	padding: 16px 32px;
+	font-family: 'Karla', sans-serif;
+}
+/*Styles the NZQA link on the page*/
+
+.nzqa-link {
+	color: black;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color .3s ease;
+}
+/*Makes the NZQA link turn blue when the user hovers their mouse over it*/
+.nzqa-link:hover {
+	color: #65b8e7;
+	transition: color .3s ease;
+}
+/***CSS FOR SPATIAL PAGE***/
+
+/*** code for the product gallery ***/
+
+/*Sets the size of the images inthe spatial gallery and makes sure they can fit 4 images on one row*/
+.gallery-column-spatial {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+/*Sets the side margins of the table to be bigger than the margins of the main content*/
+.spatial-gallery {
+	margin: 0 -15%;
+}
+/***CSS FOR PRODUCT PAGE***/
+
+/*-- code for the product gallery --*/
+
+/*Ensures that the images sit neatly in a grid pattern*/
+.gallery-row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+/*Sizes image to fit gallery and ensures that the images in the grid pattern can fit 3 images in a row*/
+.gallery-column {
+	flex: 33.33%;
+	max-width: 33.33%;
+	padding: 0 4px;
+}
+/***CSS SHARED FOR SPATIAL AND PRODUCT PAGE***/
+
+/* Ensures Galleries display properly in desktop, laptop and tablet view, without any weired grid glitches*/
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+/*adds box shadow styling to the gallery images on the spatial and product page*/
+
+.gallery-column img, .gallery-column-spatial img {
+	box-shadow: 0px 2px 3px 1px gray;
+}
+/* Adds the border to the images in the galleries and in the about page 'Visual Communications' section*/
+
+.gallery-column img, .gallery-column-spatial img, .about-vc-img img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	border: 2px solid black;
+}
+/*Styles the main image for the product and spatial pages and makes sure they cit in the middle og th epage*/
+.spatial-main-img, .product-main-img {
+	padding-top: 50px;
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+/***CSS FOR ABOUT PAGE***/
+
+/*Styles the parallax at the top of the about page*/
+
+.about-parallax {
+	background-image: url("Images/about_parallax.png");
+	min-height: 55vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -22px;
+	border-bottom: 5px solid #132f51;
+}
+/*Styles the image on the about page DVC section by sizing it down and adding the border*/
+.about-d-img {
+	width: 80%;
+	display: block;
+	margin: auto;
+	border: 2px solid black;
+}
+/*this makers sure the 2 images at the bottom of the about page are an appropriate size and makes sure the sit next to each other*/
+.about-vc-img {
+	flex: 40%;
+	max-width: 50%;
+	padding: 0 6px;
+}
+
+/****Phone Media Queries****/
+
+@media only screen and (max-width: 640px) {
+	/*Media Queries for all pages*/
+	
+	/*Adds the padding to the top of the content to make sure it displays properly in phone view*/
+	.main-content {
+	padding-top: 40px;
+
+}
+	/*Removes the transitions when the user hovers over the nav and footer links as well as the nzqa link as they would be distracting in mobile view*/
+	.main-nav a:hover, footer a:hover,	.nzqa-link, .nzqa-link:hover  {
+		transition: none;
+	}
+	/*Makes the underline smaller*/
+	hr {
+		width: 40%;
+	}
+	/*Ensures the nav bar displays proper margins in mobile view*/
+	*, *:before, *:after {
+		box-sizing: content-box;
+	}
+	/*syles logo for phone nav and sets it at the top left of the screen*/
+	.mobile-logo {
+		padding-left: 20px;
+		padding-top: 10px;
+	}
+	/***Phone Nav Bar Code***/
+	
+	/*Hides the check box*/
+	input {
+		display: none;
+	}
+	
+
+
+	/*resizes the main image for index page to ensure it fits the phone screen*/
+	.index-main-img {
+		width: 100%;
+	}
+	
+	/*Makes the font of the index table headers slightly bigger*/
+	.index-table th, td {
+		font-size: 120%;
+	}
+	
+	
+	/*Makes the font of the index table smaller*/
+	.index-table tr, td {
+		font-size: 85%;
+	}
+	/*Moves the table to the left to ensure it fits on the page*/
+	.index-table {
+		margin-left: -12%;
+	}
+	
+	/*changes the spatial gallery so only 1 image can fit per row*/
+	.gallery-column-spatial {
+		flex: 100%;
+		max-width: 100%;
+	}
+	/*changes the product gallery so only 1 image can fit per row*/
+	.gallery-column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	/*Media Queries for about page*/
+	/* changes the container of the 2 bottom images so that they show up on top of each other instead of next to each other*/
+	.about-vc-img {
+		flex: 100%;
+		max-width: 100%;
+	}
+	/*hides the about parallax in mobile view*/
+	.about-parallax {
+		display: none;
+	}
+		/*Makes the site title smaller in phone view*/
+	.title {
+		font-size: 150%;
+	}
+}
+/*Tablet Media Queries*/
+
+@media only screen and (min-width: 641px) and (max-width: 1000px) {
+		/*Makes the site title smaller in tablet view*/
+	.title {
+		font-size: 150%;
+	}
+	/*styles the logo and makes sure it sits on the left of the page and fits the nav bar*/
+	.logo {
+		width: 13%;
+		display: block;
+		float: left;
+		padding-left: 4%;
+		margin-top: -9%;
+	}
+	/*Media Queries for index page*/
+	
+	/*Styles for the index page table*/
+	
+	/*makes the table header text (top blue row) smaller*/
+	.index-table tr th {
+		font-size: 130%
+	}
+		/*makes the rest of the table text smaller*/
+	.index-table th, td {
+		font-size: 80%;
+	}
+	/*Styles the index image links*/
+	.text {
+		background-color: #132f51;
+		font-size: 17px;
+	}
+	/*Changes the blue box in the index image links so that it touches the border of the image, and removes the hover transition*/
+	.middle {
+		width: 103%;
+		transition: none;
+	}
+	/*removes the transition that happens when the user hovers over the image*/
+	.image {
+		transition: none;
+	}
+	/*Index Image*/
+	.index-main-img {
+		padding-top: 10px;
+	}
+	/*spatial page column responsive coding*/
+	.gallery-column-spatial {
+		flex: 50%;
+		max-width: 50%;
+		padding: 0 4px;
+	}
+	/*product page column responsive coding*/
+	.gallery-column {
+		flex: 50%;
+		max-width: 50%;
+		padding: 0 4px;
+	}
+	/* about page parallax*/
+	.about-parallax {
+		margin-top: -10px;
+	}
+}
+/*laptop*/
+
+@media only screen and (min-width: 1001px) and (max-width: 1450px) {
+	/*Media Queries for index page table*/
+	/*Adds a hover effect and a transition effect for the index image text. when the user hovers over the table (except the header top row) the boc turns blue and the text turns white*/
+	.index-table th, td:hover {
+		color: white;
+		background-color: #65b8e7;
+		transition: color .3s ease;
+		transition: background-color .3s ease;
+	}
+
+	/*makes the nav bar links smaller and closer together to fit the nav bar*/
+	.main-nav a {
+		font-size: 140%;
+		padding-right: 1%;
+	}
+	/*adds hover effects to the images in laptop view*/
+	.hover-img {
+		transition: opacity 0.3s ease;
+	}
+	.hover-img:hover {
+		opacity: 0.4;
+		transition: opacity 0.3s ease;
+	}
+}
+/* desktop */
+
+@media only screen and (min-width: 1451px) {
+	/* index table*/
+	/*Adds a hover effect and a transition effect for the index image text. when the user hovers over the table (except the header top row) the boc turns blue and the text turns white*/
+	.index-table th, td:hover {
+		color: white;
+		background-color: #65b8e7;
+		transition: color .3s ease;
+		transition: background-color .3s ease;
+	}
+	/*hides the phone nav*/
+	/*adds hover effects to the images in desktop view*/
+	.hover-img {
+		transition: opacity 0.3s ease;
+	}
+	.hover-img:hover {
+		opacity: 0.4;
+		transition: opacity 0.3s ease;
+	}
+}
